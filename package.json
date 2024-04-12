@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "node build.cjs",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/exec": "^1.1.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "~20.12.7",
+    "esbuild": "^0.20.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-pkg": "^0.18.1",
+    "typescript": "^5.4.5"
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "plugins": [
+      "prettier-plugin-pkg",
+      "prettier-plugin-organize-imports"
+    ]
+  }
+}

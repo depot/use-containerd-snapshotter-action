@@ -1,0 +1,9 @@
+name: Use containerd snapshotter
+description: Configures the local Docker daemon to use the experimental containerd snapshotter
+author: Depot
+branding:
+  icon: package
+  color: gray-dark
+runs:
+  using: node20
+  main: dist/index.js
