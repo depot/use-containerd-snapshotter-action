@@ -1,3 +1,4 @@
+import {exec} from '@actions/exec'
 import * as fsp from 'fs/promises'
 
 async function run() {
@@ -13,6 +14,8 @@ async function run() {
   parsedConfig.features['containerd-snapshotter'] = true
 
   await fsp.writeFile('/etc/docker/daemon.json', JSON.stringify(parsedConfig, null, 2))
+
+  await exec('systemctl', ['restart', 'docker'])
 }
 
 run().catch((error) => {
