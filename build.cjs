@@ -5,7 +5,7 @@ esbuild.build({
   bundle: true,
   minify: false,
   platform: 'node',
-  target: 'node20',
+  target: 'node24',
   outfile: 'dist/index.js',
 })
 
@@ -14,6 +14,6 @@ esbuild.build({
   bundle: true,
   minify: false,
   platform: 'node',
-  target: 'node20',
+  target: 'node24',
   outfile: 'dist/configure.js',
 })
